@@ -25,7 +25,7 @@ FROM node:22-alpine AS release
 WORKDIR /app
 
 # Copy the built files from the builder stage
-COPY --from=builder /app/build ./build
+COPY --from=builder /app/server ./server
 
 # Copy node_modules for runtime
 COPY --from=builder /app/node_modules ./node_modules
@@ -40,4 +40,4 @@ ENV NODE_ENV=production
 # EXPOSE 3000
 
 # Define the command to run the server
-CMD ["node", "build/index.js"]
+CMD ["node", "server/index.js"]

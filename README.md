@@ -55,7 +55,7 @@ Then, in your `claude_desktop_config.json`, add a new MCP server:
     "mcpServers": {
         "todoist-mcp": {
             "command": "node",
-            "args": ["/path/to/repo/build/index.js"],
+            "args": ["/path/to/repo/server/index.js"],
             "env": {
                 "TODOIST_API_KEY": "your_todoist_api_key"
             }
