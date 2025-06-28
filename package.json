@@ -9,7 +9,7 @@
     "scripts": {
         "build": "npm run build-tsc && npm run permissions",
         "build-tsc": "npx tsc",
-        "permissions": "node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+        "permissions": "node -e \"require('fs').chmodSync('server/index.js', '755')\"",
         "format": "biome check --write",
         "prepare": "husky || true && npm run build"
     },
@@ -37,6 +37,8 @@
         "typescript": "5.8.3"
     },
     "lint-staged": {
-        "*.{js,ts,json}": ["biome check --write"]
+        "*.{js,ts,json}": [
+            "biome check --write"
+        ]
     }
 }

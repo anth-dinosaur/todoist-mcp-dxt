@@ -1,0 +1,17 @@
+{
+    "name": "todoist-mcp",
+    "version": "1.0.2",
+    "description": "MCP server to interact with Todoist tasks and projects.",
+    "server": {
+        "command": "node",
+        "args": ["server/index.js"]
+    },
+    "config": {
+        "TODOIST_API_KEY": {
+            "label": "Todoist API Key",
+            "description": "API token used to authenticate with Todoist. Configure this via the Claude UI.",
+            "type": "string",
+            "secret": true
+        }
+    }
+}

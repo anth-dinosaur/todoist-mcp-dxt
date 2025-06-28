@@ -14,4 +14,4 @@ startCommand:
   commandFunction:
     # A function that produces the CLI command to start the MCP on stdio.
     |-
-    config => ({command: 'node', args: ['build/index.js'], env: { TODOIST_API_KEY: config.todoistApiKey }})
+    config => ({command: 'node', args: ['server/index.js'], env: { TODOIST_API_KEY: config.todoistApiKey }})
